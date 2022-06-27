@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Welcome To Pet Fax!</h1>
-   
-    {% for pet in pets %}
-    <h2>{{ pet.pet_name }}</h2>
-    <a href="/pets/{{ pet.pet_id }}">go to {{ pet.pet_name }}'s page</a>
-    <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}">
-    {% endfor %}
+    <form action="POST">
+        <label for="submitter">Please enter you name</label>
+        <input type="text" name="submitter">
+        <label for="fact">What fact have you found</label>
+        <input type="text" name="fact">
+    </form>
 </body>
 </html>

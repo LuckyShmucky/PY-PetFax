@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Welcome To Pet Fax!</h1>
-   
-    {% for pet in pets %}
-    <h2>{{ pet.pet_name }}</h2>
-    <a href="/pets/{{ pet.pet_id }}">go to {{ pet.pet_name }}'s page</a>
-    <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}">
-    {% endfor %}
+    {% if pet %}
+    <h1>{{ pet.pet_name }}</h1>
+    <img src="{{ pet.pet_photo }}" alt="Pic of the pet">
+    <p> {{ pet.pet_fact }} </p>
+    {% else %}
+    <h1> There is not pet or they have been adopted :(</h1>
+    {% endif %}
 </body>
 </html>

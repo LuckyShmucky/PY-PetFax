@@ -1,0 +1,17 @@
+h1{
+    color: white
+    
+}
+
+html{
+    background-color: aquamarine;
+}
+
+img{
+    width: 50%;
+    border-radius: 20px;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
