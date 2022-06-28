@@ -8,4 +8,4 @@ bp2 = Blueprint(
 
 @bp2.route('/')
 def show(id):
-    return render_template('show.html', pet=pets[id-1])
+    return render_template('pets/show.html', pet=pets[id-1])

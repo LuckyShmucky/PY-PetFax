@@ -16,5 +16,8 @@ def create_app():
 
     from . import new_fact_form
     app.register_blueprint(new_fact_form.form_bp, url_prefix='/facts/new')
-   
+    
+    from . import fact 
+    app.register_blueprint(fact.fact_bp)
+
     return app
